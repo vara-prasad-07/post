@@ -685,10 +685,8 @@ MEDIA QUERY PHONE
 }
 
 #graph {
-  display: flex;
-  justify-content: center;  /* Center horizontally */
-  align-items: center;      /* Center vertically (if needed) */
+     /* Center vertically (if needed) */
     
-  margin-left: 80px;
+  margin:30px;
 }
 
