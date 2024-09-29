@@ -688,7 +688,7 @@ MEDIA QUERY PHONE
   display: flex;
   justify-content: center;  /* Center horizontally */
   align-items: center;      /* Center vertically (if needed) */
-  height:50%;   
+    
   margin-left: 80px;
 }
 
