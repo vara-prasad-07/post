@@ -6,50 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  
   
 </head>
 <body>
    <div class="container">
-      <aside>
+      <aside class="aside" id="aside">
            
-         <div class="top">
-           <div class="logo">
-             <h2><span class="danger">DOP'S LOGIN</span></h2>
+        <div class="right">
+
+          <div class="top">
+            <div class="profile">
+              <div class="profile-photo">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.Gr08ttdkyNaZGKJflDeRrAHaHa&pid=Api&P=0&h=180" alt=""/>
+              </div>
+              <div class="info">
+                  <p><b>Name</b></p>
+                  <p>Patient</p>
+                  <small class="text-muted"></small>
+              </div>
            </div>
-           <div class="close" id="close_btn">
-            <span class="material-symbols-sharp">
-              close
-              </span>
-           </div>
-         </div>
+          
+             
+          </div>
+          
+            
+          </div>
          <!-- end top -->
           <div class="sidebar">
 
-            <a href="#" class="active1">
+            <a href="#" class="active1" id="dashboard">
               <span class="material-symbols-sharp">grid_view </span>
               <h3>Dashboard</h3>
            </a>
-           <a href="#" onclick="navigateTo('analytic.html')" class="active1">
+           <a href="#" class="active1" id="aitreatment">
               <span class="material-symbols-sharp">insights </span>
-              <h3>Analytics</h3>
+              <h3>AI_treatment</h3>
            </a>
-           <a href="#" onclick="navigateTo('leaderboard.html')" class="active1">
+           <a href="#" class="active1" id="reports">
             <span class="material-symbols-sharp">person_outline </span>
-            <h3>Leaderboard</h3>
-           </a>
-           <a href="#" class="active1">
-              <span class="material-symbols-sharp">mail_outline </span>
-              <h3>Customer Feedbacks</h3> 
-           </a>
-           <a href="#" class="active1">
-              <span class="material-symbols-sharp">receipt_long </span>
-              <h3>AI-ChatBot</h3>
-           </a>
-           <a href="#" class="active1">
-              <span class="material-symbols-sharp">report_gmailerrorred </span>
-              <h3>Reports</h3>
+            <h3>Reports</h3>
            </a>
            <a href="#" class="active1">
               <span class="material-symbols-sharp">settings </span>
@@ -73,7 +72,7 @@
         start main part
       --------------- -->
 
-      <main>
+      <main class="dashboardmain" id="dashboardmain">
            <h1>Dashbord</h1>
 
            <div class="date">
@@ -192,6 +191,152 @@
       
 
       </main>
+      <main class="analyticsmain" id="aitreatmentmain">
+        <h1>Performance Analytics</h1>
+        <div class="analytics-section" id="graph">
+          
+          <canvas id="myChart" width="400" height="200"></canvas> <!-- Canvas for the graph -->
+        </div>
+  
+        <div class="recent_order">
+          <h2>Last Week Report</h2>
+          <table> 
+              <thead>
+               <tr>
+                 <th>Day</th>
+                 <th>No of deliveries</th>
+                 <th>no of problems resolved</th>
+                 <th>Performance</th>
+               </tr>
+              </thead>
+               <tbody>
+                  <tr>
+                    <td>Monday</td>
+                    <td>50</td>
+                    <td>10</td>
+                    <td class="warning">Good</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                   <td>Tuesday</td>
+                   <td>100</td>
+                   <td>40</td>
+                   <td class="warning">average</td>
+                   <td class="primary">Details</td>
+                 </tr>
+                 <tr>
+                   <td>Wednesday</td>
+                   <td>150</td>
+                   <td>30</td>
+                   <td class="warning">Below average</td>
+                   <td class="primary">Details</td>
+                 </tr>
+                 <tr>
+                   <td>Thursday</td>
+                   <td>200</td>
+                   <td>80</td>
+                   <td class="warning">Good</td>
+                   <td class="primary">Details</td>
+                 </tr>
+                 <tr>
+                  <td>Friday</td>
+                  <td>250</td>
+                  <td>50</td>
+                  <td class="warning">Average</td>
+                  <td class="primary">Details</td>
+                </td<>
+                <tr>
+                  <td>Saturday</td>
+                  <td>300</td>
+                  <td>90</td>
+                  <td class="warning">Good</td>
+                  <td class="primary">Details</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>350</td>
+                  <td>100</td>
+                  <td class="warning">Excellent</td>
+                  <td class="primary">Details</td>
+                </tr>
+               </tbody>
+          </table>
+          <a href="#">Show All</a>
+       </div>
+        
+      </main>
+      <main class="reportsmain" id="reportsmain">
+        <h1>Postoffice's Ranking</h1>
+      
+
+      <div class="recent_order">
+        <h2>This week</h2>
+        <table> 
+            <thead>
+             <tr>
+               <th>Rank</th>
+               <th>Post Office Name</th>
+               <th>Pincode</th>
+               <th>Points</th>
+             </tr>
+            </thead>
+             <tbody>
+                <tr>
+                  <td>#1</td>
+                  <td>Ramayampet S.O</td>
+                  <td>502101</td>
+                  <td class="warning">360</td>
+                  <td class="primary">Details</td>
+                </tr>
+                <tr>
+                 <td>#2</td>
+                 <td>Nizampet S.O</td>
+                 <td>502102</td>
+                 <td class="warning">300</td>
+                 <td class="primary">Details</td>
+               </tr>
+               <tr>
+                 <td>#3</td>
+                 <td>Medak Town S.O</td>
+                 <td>502110</td>
+                 <td class="warning">296</td>
+                 <td class="primary">Details</td>
+               </tr>
+               <tr>
+                 <td>#4</td>
+                 <td>Haveli Ghanpur S.O</td>
+                 <td>502113</td>
+                 <td class="warning">290</td>
+                 <td class="primary">Details</td>
+               </tr>
+               <tr>
+                <td>#5</td>
+                <td>Rajpally S.O</td>
+                <td>502117</td>
+                <td class="warning">285</td>
+                <td class="primary">Details</td>
+              </tr>
+              <tr>
+                <td>#6</td>
+                <td>Chanakya Puri SO</td>
+                <td>110021</td>
+                <td class="warning">279</td>
+                <td class="primary">Details</td>
+              </tr>
+              <tr>
+                <td>#7</td>
+                <td>A F Rajokari SO</td>
+                <td>110038</td>
+                <td class="warning">260</td>
+                <td class="primary">Details</td>
+              </tr>
+             </tbody>
+        </table>
+        <a href="#">Show All</a>
+     </div>
+    </main>
+      
+      </main>
       <!------------------
          end main
         ------------------->
@@ -199,111 +344,9 @@
       <!----------------
         start right main 
       ---------------------->
-    <div class="right">
+    
 
-<div class="top">
-   <button id="menu_bar">
-     <span class="material-symbols-sharp">menu</span>
-   </button>
-
-   <div class="theme-toggler">
-     <span class="material-symbols-sharp active">light_mode</span>
-     <span class="material-symbols-sharp">dark_mode</span>
-   </div>
-    <div class="profile">
-       <div class="info">
-           <p><b>DOP STAFF</b></p>
-           <p>Admin</p>
-           <small class="text-muted"></small>
-       </div>
-       <div class="profile-photo">
-         <img src="https://tse1.mm.bing.net/th?id=OIP.Gr08ttdkyNaZGKJflDeRrAHaHa&pid=Api&P=0&h=180" alt=""/>
-       </div>
-    </div>
-</div>
-
-  <div class="recent_updates">
-     <h2>Recent Update</h2>
-   <div class="updates">
-      <div class="update">
-         <div class="profile-photo">
-            <img src="./images/profile-4.jpg" alt=""/>
-         </div>
-        <div class="message">
-           <p><b>Babar</b> Recived his order of Parcel</p>
-        </div>
-      </div>
-      <div class="update">
-        <div class="profile-photo">
-        <img src="./images/profile-3.jpg" alt=""/>
-        </div>
-       <div class="message">
-          <p><b>Ali</b> Recived his order of Mail</p>
-       </div>
-     </div>
-     <div class="update">
-      <div class="profile-photo">
-         <img src="./images/profile-2.jpg" alt=""/>
-      </div>
-     <div class="message">
-        <p><b>Ramzan</b> Recived his order of Mail</p>
-     </div>
-   </div>
-  </div>
-  </div>
-
-  <div class="sales-analytics">
-    <h2>Sales Analytics</h2>
-
-     <div class="item onlion">
-       <div class="icon">
-         <span class="material-symbols-sharp">shopping_cart</span>
-       </div>
-       <div class="right_text">
-         <div class="info">
-           <h3>Deliveries</h3>
-           <small class="text-muted">Last 2 Hours</small>
-         </div>
-         <h5 class="danger">-17%</h5>
-         <h3>3849</h3>
-       </div>
-     </div>
-     <div class="item onlion">
-       <div class="icon">
-         <span class="material-symbols-sharp">shopping_cart</span>
-       </div>
-       <div class="right_text">
-         <div class="info">
-           <h3>Deliveries</h3>
-           <small class="text-muted">Last 2 Hours</small>
-         </div>
-         <h5 class="success">-17%</h5>
-         <h3>3849</h3>
-       </div>
-     </div>
-     <div class="item onlion">
-       <div class="icon">
-         <span class="material-symbols-sharp">shopping_cart</span>
-       </div>
-       <div class="right_text">
-         <div class="info">
-           <h3>Deliveries</h3>
-           <small class="text-muted">Last 2 Hours</small>
-         </div>
-         <h5 class="danger">-17%</h5>
-         <h3>3849</h3>
-       </div>
-     </div>
-  
- 
-
-</div>
-
-     <div class="item add_product">
-           <div>
-           <span class="material-symbols-sharp">add</span>
-           </div>
-    </div>
+     
 </div>
 
 
