@@ -51,15 +51,29 @@ const ctx = document.getElementById('myChart').getContext('2d');
       }
     });
 
-    // Add this script to automatically highlight the active link based on the current page
-    document.querySelectorAll('a').forEach(link => {
-        if (link.href === window.location.href) {
-        link.classList.add('active1');
-        }
-    });
-  
 
-    
-    function navigateTo(page) {
-      window.location.href = page;  // Redirects to the target page
-    }
+
+
+let dashboardbtn=document.getElementById("dashboard");
+let aitreatmentbtn=document.getElementById("aitreatment");    
+let reportsbtn=document.getElementById("reports");
+let dashboardblock=document.getElementById("dashboardmain");
+let aitreatmentblock=document.getElementById("aitreatmentmain");
+let reportsblock=document.getElementById("reportsmain");
+
+dashboardbtn.addEventListener("click",function(){
+    dashboardblock.style.display="block";
+    aitreatmentblock.style.display="none";
+    reportsblock.style.display="none";
+   
+})
+aitreatmentbtn.addEventListener("click",function(){
+    dashboardblock.style.display="none";
+    aitreatmentblock.style.display="block";
+    reportsblock.style.display="none";
+})
+reportsbtn.addEventListener("click",function(){
+    dashboardblock.style.display="none";
+    aitreatmentblock.style.display="none";
+    reportsblock.style.display="block";
+})
